@@ -28,10 +28,11 @@
 }
 
 @media (min-width: $desktop-width) {
-  .primar-list {
+  .primary-list {
+    margin-bottom: 10px;
+
     &__item {
-      width: 100%;
-      margin-right: 5%;
+      margin-right: 35px;
 
       &:last-child {
         margin-right: 0;
@@ -40,7 +41,6 @@
 
     &__link {
       font-size: 12px;
-      line-height: 1;
 
       &:hover,
       &:focus {

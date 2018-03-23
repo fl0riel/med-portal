@@ -45,11 +45,24 @@
 @media (min-width: $tablet-width) {
   .user {
     display: flex;
-    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex: 1 2 auto;
     align-items: center;
 
     &__list {
-      flex-grow: 1;
+      justify-content: flex-end;
+      flex: 1 2 auto;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user {
+    max-width: 250px;
+
+    &__list {
+      //
     }
   }
 }

@@ -15,7 +15,7 @@
   }
 
   &__overlay {
-    //display: none;
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -30,25 +30,18 @@
 
 @media (min-width: $tablet-width) {
   .page-header {
-    &__logo-block {
-      justify-content: space-between;
-    }
-
-    &__logo {
-      margin: 0 0 0 20px;
-      padding-right: 30px;
+    &__wrapper {
+      flex-grow: 1;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
-    &__burger {
-      display: none;
-    }
+    align-items: flex-start;
 
-    &__logo {
-      margin: 0;
+    &__overlay {
+      display: none;
     }
   }
 }
