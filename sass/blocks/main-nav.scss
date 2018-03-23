@@ -1,0 +1,143 @@
+@import "../variables.scss";
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100%;
+  padding: 20px 10px 0 15px;
+  background-color: $nav-bg;
+  z-index: 3;
+
+  &--close {
+    display: none;
+  }
+
+  &__wrapper {
+    height: calc(100vh - 100px);//-160px
+    overflow-y: auto;
+  }
+
+  &__overlay {
+    display: none;//block
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    background-color: rgba($nav-bg, 0.8);
+    z-index: 4;
+  }
+
+  &__logo-block {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $main-title-color;
+    z-index: 3;
+  }
+
+  &__burger {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background: url(../img/icon-menu-open.svg) center center no-repeat;
+    background-size: contain;
+
+    &--close {
+      background: url(../img/icon-menu-close.svg) center center no-repeat;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    width: 110px;
+    height: 25px;
+    margin: 0 auto;
+
+    &[href]:hover,
+    &[href]:focus {
+      opacity: 0.7;
+    }
+
+    &[href]:active {
+      opacity: 0.2;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-shrink: 1;
+    width: 100%;
+    border-bottom: 1px solid lighten($main-title-color, 55%);
+
+    &--active a {
+      color: $main-active-color;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-grow: 1;
+    padding: 15px 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    font-family: "Roboto Condensed", "Tahoma", "Geneva", sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    &__logo-block {
+      //justify-content: space-between;
+    }
+
+    &__logo {
+      margin: 0 0 0 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    &__burger {
+      display: none;
+    }
+
+    &__logo {
+      margin: 0;
+    }
+
+    &__link {
+      //
+
+      &:hover,
+      &:focus {
+        border-bottom: 2px solid $main-title-color;
+      }
+
+      &:active {
+        color: lighten($main-title-color, 25%);
+        border-bottom-color: lighten($main-title-color, 25%);
+      }
+    }
+  }
+}

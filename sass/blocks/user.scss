@@ -1,0 +1,55 @@
+@import "../variables.scss";
+
+.user {
+  display: none;
+  text-transform: uppercase;
+
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-right: 10%;
+
+    &--hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 14px;
+
+    &--subscribe {
+      font-weight: 400;
+      font-size: 12px;
+      padding: 10px;
+      background-color: $main-active-color;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .user {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+
+    &__list {
+      flex-grow: 1;
+    }
+  }
+}
