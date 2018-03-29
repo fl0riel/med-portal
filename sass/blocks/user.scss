@@ -12,19 +12,10 @@
   }
 
   &__item {
-    margin-right: 10%;
+    margin-left: 10%;
 
     &--hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      border: 0;
-      padding: 0;
-      white-space: nowrap;
-      clip-path: inset(100%);
-      clip: rect(0 0 0 0);
-      overflow: hidden;
+      display: none;
     }
   }
 
@@ -62,7 +53,22 @@
     max-width: 250px;
 
     &__list {
-      //
+      margin-bottom: 10px;
+    }
+
+    &__link {
+      font-weight: 400;
+      font-size: 12px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &--subscribe {
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
   }
 }

@@ -16,19 +16,19 @@
     &::-webkit-input-placeholder {
       color: $main-title-color;
       text-transform: uppercase;
-      opacity: 0.3;
+      opacity: 0.7;
     }
 
     &::-moz-placeholder {
       color: $main-title-color;
       text-transform: uppercase;
-      opacity: 0.3;
+      opacity: 0.7;
     }
 
     &:-ms-input-placeholder {
       color: $main-title-color;
       text-transform: uppercase;
-      opacity: 0.3;
+      opacity: 0.7;
     }
   }
 
@@ -47,8 +47,11 @@
 
 @media (min-width: $tablet-width) {
   .search {
+    flex-grow: 1;
+
     &__field {
       display: flex;
+      width: 100%;
     }
   }
 }

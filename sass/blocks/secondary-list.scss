@@ -17,13 +17,14 @@
     display: flex;//flex
     flex-wrap: wrap;
     width: 220px;
-    padding: 20px 15px 0;
+    padding: 0;
     background-color: $nav-bg;
     z-index: 4;
   }
 
   &__wrapper {
     height: calc(100vh - 1px);
+    padding: 20px 15px 0;
     overflow-y: scroll;
   }
 
@@ -93,9 +94,9 @@
     padding: 10px 0;
 
     &__item {
-      position: relative;
+      position: static;
       width: 20%;
-      padding: 5px 15px 0 10px;
+      padding: 5px 15px 5px 10px;
       border-left: 1px solid lighten($main-title-color, 55%);
 
       &--hidden {
@@ -118,13 +119,61 @@
         display: block;
         width: 80%;
         height: 3px;
-        margin-bottom: -10px;
+        margin-bottom: -5px;
         background-color: $main-title-color;
+      }
+
+      &:hover .secondary-list__block {
+        visibility: visible;
       }
     }
 
     &__block {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: auto;
+      padding: 0;
+      margin-left: -40px;
+      visibility: hidden;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      width: 800px;
+      height: auto;
+      padding: 45px;
+      border: 5px solid $nav-bg;
+      border-top: 0;
+      background: darken($nav-bg, 2%); //подобрать цвета
+      box-shadow: 0 2px 22px 0 rgba($main-color, 0.11), 0 4px 5px 0 rgba($main-color, 0.22);
+      overflow: visible;
+    }
+
+    &__back {
       display: none;
+    }
+
+    &__row {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__unit {
+      display: flex;
+      flex-grow: 1;
+      min-width: 190px;
+      margin-right: 50px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &--decrease {
+        flex-grow: 0;
+      }
     }
 
     &__link {
@@ -142,9 +191,8 @@
     }
 
     &__roll {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 }

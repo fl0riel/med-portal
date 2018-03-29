@@ -1,7 +1,9 @@
 @import "../variables.scss";
 
 .page-main {
-  //
+  width: 100%;
+  height: 1000px;
+  background-color: #0080c5;
 
   &__title {
     display: block;

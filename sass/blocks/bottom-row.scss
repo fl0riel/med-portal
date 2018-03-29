@@ -30,6 +30,11 @@
     display: none;
   }
 
+  &__info-article {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__docket {
     margin-bottom: 10px;
     font-weight: 700;
@@ -42,7 +47,10 @@
   &__link {
     font-weight: 700;
     font-size: 15px;
-    line-height: 1;
+    line-height: 1;&__info-article {
+    display: flex;
+    flex-direction: column;
+  }
     font-family: "Source Sans Pro", "Arial Black", sans-serif;
   }
 }
@@ -55,6 +63,39 @@
 
 @media (min-width: $desktop-width) {
   .bottom-row {
-    //
+    flex-direction: column;
+    flex-grow: 1;
+
+    &__header {
+      //width: 100%;
+      flex-grow: 1;
+      border: none;
+    }
+
+    &__list {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    &__item {
+      flex-direction: row;
+      width: 48%;
+      margin-right: 4%;
+
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+
+    &__link-article {
+      display: flex;
+      margin-right: 20px;
+    }
+
+    &__link {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
