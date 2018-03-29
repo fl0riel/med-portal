@@ -47,11 +47,18 @@
 
 @media (min-width: $tablet-width) {
   .search {
-    flex-grow: 1;
+    margin-left: 20px;
 
     &__field {
       display: flex;
       width: 100%;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .search {
+    flex-grow: 1;
+    margin-left: 0;
   }
 }
