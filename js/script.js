@@ -64,6 +64,10 @@ if (externalOverlay) {
     mainMenu.classList.add("main-nav--close");
     externalOverlay.classList.remove("page-header__overlay--open");
     burgerBtn.classList.remove("main-nav__burger--open");
+    innerMenu.forEach(function(secondaryMenu){
+      secondaryMenu.classList.add("secondary-list__block--close");
+    });
+    innerOverlay.classList.add("main-nav__inner-overlay--close");
   });
 }
 
