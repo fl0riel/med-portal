@@ -1,12 +1,12 @@
 @import "../variables.scss";
 
 .user {
-  display: none;
   text-transform: uppercase;
 
   &__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
     margin: 0;
     padding: 0;
     list-style: none;

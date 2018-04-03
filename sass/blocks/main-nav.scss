@@ -8,7 +8,7 @@
   flex-direction: column;
   width: 250px;
   height: 100%;
-  padding: 20px 10px 0 15px;
+  padding: 15px 10px 0 15px;
   background-color: $nav-bg;
   z-index: 3;
 
@@ -17,7 +17,10 @@
     padding: 0;
   }
 
-  &--close .page-header__overlay,
+  .page-header__overlay {
+    display: block;
+  }
+
   &--close .main-nav__inner-overlay,
   &--close .main-nav__wrapper {
     display: none;
@@ -32,12 +35,12 @@
   }
 
   &__wrapper {
-    height: calc(100vh - 100px);//-160px
+    height: calc(100vh - 100px);
     overflow-y: auto;
   }
 
   &__inner-overlay {
-    display: block;//block
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -46,13 +49,18 @@
     width: 30px;
     background-color: rgba($nav-bg, 0.8);
     z-index: 4;
+
+    &--close {
+      display: none;
+    }
   }
 
   &__logo-block {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 10px;
-    border-bottom: 2px solid $main-title-color;
+    max-width: 225px;
+    //padding-bottom: 10px;
+    //border-bottom: 2px solid $main-title-color;
     z-index: 3;
   }
 
@@ -63,10 +71,12 @@
     padding: 0;
     border: none;
     cursor: pointer;
+    //background: url(../img/icon-menu-close.svg) center center no-repeat;
     background: url(../img/icon-menu-open.svg) center center no-repeat;
-    background-size: contain;
 
-    &--close {
+    &--open {
+      //background: url(../img/icon-menu-open.svg) center center no-repeat;
+      //background-size: contain;
       background: url(../img/icon-menu-close.svg) center center no-repeat;
     }
   }
@@ -110,7 +120,7 @@
   &__link {
     display: flex;
     flex-grow: 1;
-    padding: 15px 10px 15px 0;
+    padding: 15px 20px 15px 0;
     font-weight: 700;
     font-size: 16px;
     line-height: 1;

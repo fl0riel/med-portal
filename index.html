@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Med-portal</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script
+      src="https://code.jquery.com/jquery-1.7.1.min.js"
+      integrity="sha256-iBcUE/x23aI6syuqF7EeT/+JFBxjPs5zeFJEXxumwb0="
+      crossorigin="anonymous"></script>
   </head>
   <body class="page">
     <div class="wrapper">
       <header class="page-header container">
         <div class="page-header__wrapper">
           <div class="page-header__overlay"></div>
-          <nav class="main-nav">
-            <div class="main-nav__inner-overlay"></div>
+          <nav class="main-nav main-nav--close">
+            <div class="main-nav__inner-overlay main-nav__inner-overlay--close"></div>
             <div class="main-nav__logo-block">
-              <button class="main-nav__burger">
+              <button class="main-nav__burger" type="button">
                 <span class="visually-hidden">Open menu/Close menu</span>
               </button>
               <a class="main-nav__logo" href="index.html">
@@ -40,9 +44,11 @@
               <ul class="main-nav__list secondary-list">
                 <li class="main-nav__item secondary-list__item">
                   <a class="main-nav__link secondary-list__link" href="#">Health A-Z</a>
-                  <div class="secondary-list__block">
+                  <div class="secondary-list__block secondary-list__block--close">
                     <div class="secondary-list__wrapper">
-                      <button class="secondary-list__back"></button>
+                      <button class="secondary-list__back" type="button">
+                        <span class="visually-hidden">Back to main menu</span>
+                      </button>
                       <div class="secondary-list__row top-row">
                         <section class="secondary-list__unit">
                           <h3 class="secondary-list__unit-header">Common Conditions</h3>
@@ -146,9 +152,11 @@
                 </li>
                 <li class="main-nav__item secondary-list__item">
                   <a class="main-nav__link secondary-list__link" href="#">Drugs &amp; Supplements</a>
-                  <div class="secondary-list__block">
+                  <div class="secondary-list__block secondary-list__block--close">
                     <div class="secondary-list__wrapper">
-                      <button class="secondary-list__back"></button>
+                      <button class="secondary-list__back" type="button">
+                        <span class="visually-hidden">Back to main menu</span>
+                      </button>
                       <div class="secondary-list__row top-row">
                         <section class="secondary-list__unit">
                           <h3 class="secondary-list__unit-header">Find & Review</h3>
@@ -215,9 +223,11 @@
                 </li>
                 <li class="main-nav__item secondary-list__item">
                   <a class="main-nav__link secondary-list__link" href="#">Living Healthy</a>
-                  <div class="secondary-list__block">
+                  <div class="secondary-list__block secondary-list__block--close">
                     <div class="secondary-list__wrapper">
-                      <button class="secondary-list__back"></button>
+                      <button class="secondary-list__back" type="button">
+                        <span class="visually-hidden">Back to menu</span>
+                      </button>
                       <div class="secondary-list__row top-row">
                         <section class="secondary-list__unit">
                           <h3 class="secondary-list__unit-header">Diet, Food & Fitness</h3>
@@ -302,9 +312,11 @@
                 </li>
                 <li class="main-nav__item secondary-list__item">
                   <a class="main-nav__link secondary-list__link" href="#">Family &amp; Pregnancy</a>
-                  <div class="secondary-list__block">
+                  <div class="secondary-list__block secondary-list__block--close">
                     <div class="secondary-list__wrapper">
-                      <button class="secondary-list__back"></button>
+                      <button class="secondary-list__back" type="button">
+                        <span class="visually-hidden">Back to main menu</span>
+                      </button>
                       <div class="secondary-list__row top-row">
                         <section class="secondary-list__unit">
                           <h3 class="secondary-list__unit-header">All About Pregnancy</h3>
@@ -389,9 +401,11 @@
                 </li>
                 <li class="main-nav__item secondary-list__item">
                   <a class="main-nav__link secondary-list__link" href="#">News &amp; Experts</a>
-                  <div class="secondary-list__block">
+                  <div class="secondary-list__block secondary-list__block--close">
                     <div class="secondary-list__wrapper">
-                      <button class="secondary-list__back"></button>
+                      <button class="secondary-list__back" type="button">
+                        <span class="visually-hidden">Back to main menu</span>
+                      </button>
                       <div class="secondary-list__row top-row">
                         <section class="secondary-list__unit">
                           <h3 class="secondary-list__unit-header">Health News</h3>
@@ -493,5 +507,6 @@
       <footer class="page-footer">
       </footer>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

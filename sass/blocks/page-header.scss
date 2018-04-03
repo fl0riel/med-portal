@@ -3,6 +3,7 @@
 .page-header {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding-top: 15px;
@@ -11,20 +12,21 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    width: 40%;
   }
 
   &__overlay {
-    display: block;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    //height: 100vh;
-    //width: 100vw;
     background-color: rgba($main-color, 0.9);
     z-index: 2;
+
+    &--open {
+      display: block;
+    }
   }
 }
 
